@@ -1,0 +1,65 @@
+.top-form{
+    -fx-background-color: #5082eb;
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 4,0,0,0);
+}
+
+.top-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+
+.top-btn:hover{
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000;
+}
+
+.top-btn:hover .glyph-icon {
+    -fx-fill: #000000;
+}
+
+.search{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-padding: 0px 0px 0px 30px;
+}
+
+.nav-form{
+    -fx-background-color: #ffffff;
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 4,0,0,0);
+}
+
+.nav-btn{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: #000;
+    -fx-alignment:CENTER_LEFT;
+}
+
+.nav-btn:hover{
+    -fx-background-color: #5082eb;
+    -fx-text-fill: #fff;
+}
+
+.nav-btn:hover .glyph-icon {
+    -fx-fill: #ffffff;
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+}
+
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.4), 4,0,0,0);
+}
+
+.table-view{
+    -fx-background-color: #fff;
+    -fx-border-color: #c8c8c8;
+}
+
+.nav-btn:armed, .nav-btn:focused,
+.top-btn:armed, .top-btn:focused {
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+}

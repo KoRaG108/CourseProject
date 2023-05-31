@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="1100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="175.0" layoutY="-75.0" prefHeight="70.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@courseprojectdesign.css" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="79.0" layoutY="3.0" text="СЕКРЕТАРЬ" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="32.0" text="АДМИНИСТРАЦИИ" textFill="WHITE">
+                                 <font>
+                                    <Font name="Segoe UI Black" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="530.0" prefWidth="296.0" stylesheets="@courseprojectdesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="29.0" layoutY="10.0" prefHeight="530.0" prefWidth="296.0" styleClass="nav-form" stylesheets="@courseprojectdesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="98.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/icon.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="40.0" layoutY="124.0" text="Добро Пожаловать!">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="40.0" layoutY="187.0" text="Журнал:">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="regLog_btn" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css" text="Регистрация Приёма">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="EDIT" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="visitorLog_btn" layoutX="40.0" layoutY="256.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css" text="Посетители">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="USERS" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cabinetLog_btn" layoutX="40.0" layoutY="292.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css" text="Кабинетный Фонд">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="INSTITUTION" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="serviceLog_btn" layoutX="40.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="220.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css" text="Услуги">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MONEY" wrappingWidth="22.0" />
+                                 </graphic>
+                              </Button>
+                              <Label fx:id="test_id" layoutX="40.0" layoutY="393.0" text="0" visible="false" />
+                              <Label fx:id="test_name" layoutX="40.0" layoutY="410.0" text="0" visible="false" />
+                              <Label fx:id="test_gender" layoutX="40.0" layoutY="427.0" text="0" visible="false" />
+                              <Label fx:id="test_birth" layoutX="40.0" layoutY="444.0" text="0" visible="false" />
+                              <Label fx:id="test_phone" layoutX="40.0" layoutY="461.0" text="0" visible="false" />
+                              <Label fx:id="test_series" layoutX="40.0" layoutY="478.0" text="0" visible="false" />
+                              <Label fx:id="test_number" layoutX="40.0" layoutY="495.0" text="0" visible="false" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="visitorLog_form" layoutX="184.0" layoutY="-60.0" prefHeight="600.0" prefWidth="804.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-60.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="84.0" prefHeight="502.0" prefWidth="776.0" stylesheets="@courseprojectdesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="visitorLog_tableView" layoutX="14.0" layoutY="14.0" onMouseClicked="#visitorLogSelectData" prefHeight="474.0" prefWidth="748.0" stylesheets="@courseprojectdesign.css">
+                                      <columns>
+                                          <TableColumn fx:id="visitorLog_col_visitorId" prefWidth="20.0" text="№" visible="false" />
+                                        <TableColumn fx:id="visitorLog_col_fullName" prefWidth="244.0" text="ФИО ПОСЕТИТЕЛЯ" />
+                                        <TableColumn fx:id="visitorLog_col_genderName" prefWidth="55.0" text="ПОЛ" />
+                                          <TableColumn fx:id="visitorLog_col_dateBirth" prefWidth="130.0" text="ДАТА РОЖДЕНИЯ" />
+                                          <TableColumn fx:id="visitorLog_col_phoneNumber" prefWidth="105.0" text="ТЕЛЕФОН" />
+                                          <TableColumn fx:id="visitorLog_col_seriesPassport" prefWidth="105.0" text="СЕРИЯ ДУЛ" />
+                                          <TableColumn fx:id="visitorLog_col_numberPassport" prefWidth="105.0" text="НОМЕР ДУЛ" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="visitorLog_search" layoutX="28.0" layoutY="17.0" onKeyPressed="#visitorLogSearch" prefHeight="36.0" prefWidth="260.0" promptText="Поиск" styleClass="search" stylesheets="@courseprojectdesign.css">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="37.0" layoutY="41.0" size="1.5em" />
+                              <Button fx:id="visitorLog_addBtn" layoutX="312.0" layoutY="17.0" mnemonicParsing="false" onAction="#visitorLogAdd" prefHeight="36.0" prefWidth="130.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Добавить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="visitorLog_deleteBtn" layoutX="658.0" layoutY="17.0" mnemonicParsing="false" onAction="#visitorLogDelete" prefHeight="36.0" prefWidth="118.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Удалить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USER_TIMES" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="visitorLog_editBtn" layoutX="466.0" layoutY="17.0" mnemonicParsing="false" onAction="#visitorLogEdit" prefHeight="36.0" prefWidth="168.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Редактировать">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="GEAR" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="cabinetLog_form" layoutX="10.0" layoutY="-60.0" prefHeight="600.0" prefWidth="804.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-60.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="84.0" prefHeight="502.0" prefWidth="776.0" stylesheets="@courseprojectdesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="748.0" stylesheets="@courseprojectdesign.css">
+                                       <columns>
+                                          <TableColumn fx:id="cabinetLog_col_floor" prefWidth="175.0" text="ЭТАЖ" />
+                                          <TableColumn fx:id="cabinetLog_col_number" prefWidth="175.0" text="КАБИНЕТ" />
+                                          <TableColumn fx:id="cabinetLog_col_category" prefWidth="220.0" text="КАТЕГОРИЯ" />
+                                          <TableColumn fx:id="cabinetLog_col_status" prefWidth="175.0" text="СТАТУС" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="cabinetLog_search" layoutX="28.0" layoutY="17.0" prefHeight="36.0" prefWidth="260.0" promptText="Поиск" styleClass="search" stylesheets="@courseprojectdesign.css">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="37.0" layoutY="41.0" size="1.5em" />
+                              <Button fx:id="cabinetLog_addBtn" layoutX="312.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Добавить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="PLUS" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cabinetLog_deleteBtn" layoutX="658.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="118.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Удалить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="TIMES" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cabinetLog_editBtn" layoutX="466.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="168.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Редактировать">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="GEAR" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="serviceLog_form" layoutX="10.0" layoutY="-60.0" prefHeight="600.0" prefWidth="804.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-60.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="84.0" prefHeight="502.0" prefWidth="776.0" stylesheets="@courseprojectdesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView layoutX="14.0" layoutY="14.0" prefHeight="474.0" prefWidth="748.0" stylesheets="@courseprojectdesign.css">
+                                       <columns>
+                                          <TableColumn fx:id="serviceLog_col_serviceName" prefWidth="373.0" text="НАИМЕНОВАНИЕ УСЛУГИ" />
+                                          <TableColumn fx:id="serviceLog_col_servicePrice" prefWidth="372.0" text="СТОИМОСТЬ УСЛУГИ" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="serviceLog_search" layoutX="28.0" layoutY="17.0" prefHeight="36.0" prefWidth="260.0" promptText="Поиск" styleClass="search" stylesheets="@courseprojectdesign.css">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="37.0" layoutY="41.0" size="1.5em" />
+                              <Button fx:id="serviceLog_addBtn" layoutX="312.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Добавить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="PLUS" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="serviceLog_deleteBtn" layoutX="658.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="118.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Удалить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="TIMES" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="serviceLog_editBtn" layoutX="466.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="168.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Редактировать">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="GEAR" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="regLog_form" layoutX="10.0" layoutY="-60.0" prefHeight="600.0" prefWidth="804.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-60.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="84.0" prefHeight="502.0" prefWidth="776.0" stylesheets="@courseprojectdesign.css">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView layoutX="14.0" layoutY="14.0" prefHeight="237.0" prefWidth="748.0" stylesheets="@courseprojectdesign.css">
+                                       <columns>
+                                          <TableColumn prefWidth="45.0" text="КОД" />
+                                          <TableColumn prefWidth="234.0" text="ФИО ПОСЕТИТЕЛЯ" />
+                                          <TableColumn prefWidth="75.0" text="КАБИНЕТ" />
+                                          <TableColumn prefWidth="135.0" text="ДАТА ПОСЕЩЕНИЯ" />
+                                          <TableColumn prefWidth="133.0" text="ВРЕМЯ ПРИБЫТИЯ" />
+                                          <TableColumn prefWidth="123.0" text="ВРЕМЯ ОТБЫТИЯ" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="14.0" layoutY="265.0" text="Итоговая Стоимость Дополнительных Услуг:">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView layoutX="14.0" layoutY="300.0" prefHeight="188.0" prefWidth="748.0" stylesheets="@courseprojectdesign.css">
+                                       <columns>
+                                          <TableColumn prefWidth="249.0" text="НАИМЕНОВАНИЕ УСЛУГИ" />
+                                          <TableColumn minWidth="0.0" prefWidth="248.0" text="СТОИМОСТЬ УСЛУГИ" />
+                                          <TableColumn prefWidth="248.0" text="ДАТА" />
+                                       </columns>
+                                    </TableView>
+                                    <Button layoutX="648.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="22.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="PLUS" wrappingWidth="14.0" />
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="686.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="22.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="GEAR" wrappingWidth="14.0" />
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="724.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="22.0" styleClass="nav-btn" stylesheets="@courseprojectdesign.css">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="TIMES" wrappingWidth="14.0" />
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="388.0" layoutY="266.0" prefHeight="21.0" prefWidth="258.0" text="0.0 руб.">
+                                       <font>
+                                          <Font name="Segoe UI Emoji" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <TextField fx:id="regLog_search" layoutX="28.0" layoutY="17.0" prefHeight="36.0" prefWidth="260.0" promptText="Поиск" styleClass="search" stylesheets="@courseprojectdesign.css">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="37.0" layoutY="41.0" size="1.5em" />
+                              <Button fx:id="regLog_addBtn" layoutX="312.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="130.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Добавить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USER_PLUS" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="regLog_deleteBtn" layoutX="658.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="118.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Удалить">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USER_TIMES" wrappingWidth="21.0" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="regLog_editBtn" layoutX="466.0" layoutY="17.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="168.0" styleClass="top-btn" stylesheets="@courseprojectdesign.css" text="Редактировать">
+                                 <font>
+                                    <Font name="Segoe UI Emoji" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="GEAR" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
